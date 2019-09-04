@@ -23,7 +23,7 @@ function mousePressed() {
   rect(1065, 750, 30, 30);
 
   fill('#42fff2');
-  rect(width/2, height/2, 100, 100);
+  rect(1010, 1075, 100, 100);
 
   fill(255);
   ellipse(1040, 697, 13, 13);
@@ -63,7 +63,7 @@ function mouseReleased() {
   rect(1065, 750, 30, 30);
 
   fill('#ff6817');
-  rect(width/2, height/2, 100, 100);
+  rect(1010, 1075, 100, 100);
 
   fill(255);
   ellipse(1040, 697, 13, 13);
