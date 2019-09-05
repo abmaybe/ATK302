@@ -3,10 +3,6 @@ function setup() {
   background(210)
 }
 
-function draw() {
-  text("This is Super Meat Boy's Twin Cousins. Fire Boi and Ice Boi. Like their relative, they are in a platforming game that features many deadly saws." 30, 30);
-}
-
 function mousePressed() {
 
   noStroke();
@@ -83,9 +79,6 @@ function mouseReleased() {
 
   fill(0);
   rect(1040, 725, 30, 5);
-
-
-
 
   console.log(mouseX + ',' + mouseY) ;
 }
