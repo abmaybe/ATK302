@@ -5,7 +5,7 @@ function setup() {
   background(210)
 }
 
-function mousePressed() {
+function draw() {
 
   push() ;
   translate(x, 20) ;

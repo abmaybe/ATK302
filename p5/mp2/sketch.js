@@ -1,93 +1,43 @@
-var myState = 0 ;
+var myState = 0;
 var myTimer = 0;
+let mic;
 
 function setup() {
   // put setup code here
   createCanvas(800, 800);
+  mic = new p5.AudioIn();
+  mic.start();
 }
 
 function draw() {
-  // put drawing code here
-  switch(myState){
-    case 0:
-    background('red');
-    textSize(72);
-    text("R", 100, 100);
-    }
-    break ;
+  background(200);
 
-    case 1:
-    background('green');
-    textSize(72);
-    text("E", 200, 200);
-    myTimer++
-    if (myTimer >=200) {
-      myTimer = 0;
-      myState = 2;
-    }
-    break ;
+  // Get the overall volume (between 0 and 1.0)
+  let vol = mic.getLevel();
+  fill('red');
+  stroke(0);
 
-    case 2:
-    background('blue');
-    textSize(72);
-    text("S", 300, 300);
-    myTimer++
-    if (myTimer >=200) {
-      myTimer = 0;
-      myState = 3;
-    }
-    break ;
+  // Draw an ellipse with height based on volume
+  let h = map(vol, 0, 1, height, 0);
+  rect(20, h - 25, 100, 100);
 
-    case 3:
-    background('red');
-    textSize(72);
-    text("P", 400, 400);
-    myTimer++
-    if (myTimer >=200) {
-      myTimer = 0;
-      myState = 4;
-    }
-    break ;
+  fill('orange');
+  stroke(0)
+  rect(120, h - 10, 100, 100);
 
-    case 4:
-    background('green');
-    textSize(72);
-    text("E", 500, 500);
-    myTimer++
-    if (myTimer >=200) {
-      myTimer = 0;
-      myState = 5;
-    }
-    break ;
+  fill('yellow');
+  stroke(0)
+  rect(220, h - 15, 100, 100);
 
-    case 5:
-    background('blue');
-    textSize(72);
-    text("C", 600, 600);
-    myTimer++
-    if (myTimer >=200) {
-      myTimer = 0;
-      myState = 6;
-    }
-    break ;
+  fill('green');
+  stroke(0)
+  rect(320, h - 35, 100, 100);
 
-    case 6:
-    background('red');
-    textSize(72);
-    text("T", 700, 700);
-    myTimer++
-    if (myTimer >=200) {
-      myTimer = 0;
-      myState = 0;
-    }
-    break ;
+  fill('blue');
+  stroke(0)
+  rect(420, h - 20, 100, 100);
 
-  }
-}
-
-
-function mouseReleased() {
-  if (myState == 0) {
-    myState = 1 ;
-  }
+  fill('purple');
+  stroke(0)
+  rect(520, h - 25, 100, 100);
 }
