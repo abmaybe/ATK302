@@ -3,7 +3,7 @@ var cars = [];
 function setup() {
   // put setup code here
   createCanvas(800, 800);
-  for (var i = 0; i < 100; i++) {
+  for (var i = 0; i < 50; i++) {
   cars.push(new Car());
 }
 }
