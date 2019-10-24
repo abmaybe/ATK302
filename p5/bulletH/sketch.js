@@ -43,10 +43,10 @@ function draw() {
       width1 = width1 + 5 ;
       ellipse(width / 2, height / 2, height1, width1);
       timer1++;
-      if (width1 > 1150) {
+      if (width1 > 5000) {
         width1 = 0;
       }
-      if (height1 > 1150) {
+      if (height1 > 5000) {
         height1 = 0;
       }
       if (timer1 > 165) {
@@ -55,10 +55,10 @@ function draw() {
         fill('#380087');
         ellipse(width / 2, height / 2, height2, width2);
       }
-      if (width2 > 1150) {
+      if (width2 > 5000) {
         width2 = 0;
       }
-      if (height2 > 1150) {
+      if (height2 > 5000) {
         height2 = 0;
         timer1  = 0;
       }
@@ -176,4 +176,12 @@ function reset() {
   for (var i = 0; i < 40; i++) {
     cars.push(new Car());
   }
+}
+
+function blueCircle(){
+
+}
+
+function blackCircle(){
+
 }
