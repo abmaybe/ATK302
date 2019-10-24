@@ -4,8 +4,8 @@ function setup() {
   // put setup code here
   createCanvas(800, 800);
   for (var i = 0; i < 50; i++) {
-  cars.push(new Car());
-}
+    cars.push(new Car());
+  }
 }
 
 function draw() {
@@ -13,11 +13,11 @@ function draw() {
   background(0);
 
   for (var i = 0; i < cars.length; i++) {
-  cars[i].display();
-  cars[i].drive();
-}
-fill('white');
-triangle(mouseX - 15, mouseY, mouseX, mouseY - 25, mouseX + 15, mouseY);
+    cars[i].display();
+    cars[i].drive();
+  }
+  fill('white');
+  triangle(mouseX - 15, mouseY, mouseX, mouseY - 25, mouseX + 15, mouseY);
 
 }
 
