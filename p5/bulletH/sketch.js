@@ -99,6 +99,7 @@ function mouseReleased() {
     case 2: //this was the lose state
       reset();
       myState = 0;
+      timer = 0;
       break;
 
     case 3: //win state
@@ -174,6 +175,5 @@ function reset() {
   cars = []; //clear the array
   for (var i = 0; i < 40; i++) {
     cars.push(new Car());
-    timer1 = 0;
   }
 }
