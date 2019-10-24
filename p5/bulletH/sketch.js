@@ -5,7 +5,9 @@ var timer = 0;
 var yoda;
 var height1 = 0;
 var width1 = 0;
-
+var timer1 = 0;
+var width2 = 0;
+var height2 = 0;
 
 function setup() {
 
@@ -40,12 +42,25 @@ function draw() {
       height1 = height1 + 5;
       width1 = width1 + 5 ;
       ellipse(width / 2, height / 2, height1, width1);
+      timer1++;
       if (width1 > 1150) {
         width1 = 0;
       }
       if (height1 > 1150) {
         height1 = 0;
-        background('black');
+      }
+      if (timer1 > 165) {
+        height2 = height2 + 5;
+        width2 = width2 + 5;
+        fill('#380087');
+        ellipse(width / 2, height / 2, height2, width2);
+      }
+      if (width2 > 1150) {
+        width2 = 0;
+      }
+      if (height2 > 1150) {
+        height2 = 0;
+        timer1  = 0;
       }
 
       stroke('white');
