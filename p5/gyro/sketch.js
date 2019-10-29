@@ -37,7 +37,7 @@ function draw() {
   yPosition = map(beta, -30, 30, 0, height);
 
 
-  image(bunnyImage, 0, 0, 500, 500);
+  image(bunnyImage, frogPos.x, frogPos.y, 500);
 
 
   translate(xPosition, yPosition);
@@ -77,7 +77,7 @@ function draw() {
   text("atk", width / 2, height / 2);
 //frog
 
-check4Keys();
+//check4Keys();
 
 }
 
@@ -106,13 +106,13 @@ function Car() {
 
 }
 
-function check4Keys(){
-  if (keyIsDown(LEFT_ARROW)) frogPos.x = frogPos.x - 5;
-  if (keyIsDown(RIGHT_ARROW)) frogPos.x = frogPos.x + 5;
-  if (keyIsDown(UP_ARROW)) frogPos.y = frogPos.y - 5;
-  if (keyIsDown(DOWN_ARROW)) frogPos.y = frogPos.y + 5;
+  //function check4Keys(){
+  //if (keyIsDown(LEFT_ARROW)) frogPos.x = frogPos.x - 5;
+  //if (keyIsDown(RIGHT_ARROW)) frogPos.x = frogPos.x + 5;
+  //if (keyIsDown(UP_ARROW)) frogPos.y = frogPos.y - 5;
+  //if (keyIsDown(DOWN_ARROW)) frogPos.y = frogPos.y + 5;
 
-}
+  //}
 
 window.addEventListener('deviceorientation', function(e) {
   alpha = e.alpha;
