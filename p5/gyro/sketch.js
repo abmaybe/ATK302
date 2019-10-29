@@ -32,12 +32,14 @@ function draw() {
   // put drawing code here
   background(100);
 
-  push();
   xPosition = map(gamma, -60, 60, 0, width);
   yPosition = map(beta, -30, 30, 0, height);
 
+  push();
 
-  image(bunnyImage, xPosition, yPosition, 500);
+
+
+  image(bunnyImage, frogPos.x, frogPos.y, 500);
 
 
   translate(xPosition, yPosition);
@@ -75,6 +77,8 @@ function draw() {
   textSize(300);
   textAlign(CENTER);
   text("atk", width / 2, height / 2);
+  frogPos.x = xPosition;
+  frogPos.y = yPosition; 
   //frog
 
   //check4Keys();
