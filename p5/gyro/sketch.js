@@ -31,17 +31,19 @@ function setup() {
 function draw() {
   // put drawing code here
   background(100);
-  
+
   push();
   xPosition = map(gamma, -60, 60, 0, width);
   yPosition = map(beta, -30, 30, 0, height);
 
 
   image(bunnyImage, 0, 0, 500, 500);
-  pop();
+
 
   translate(xPosition, yPosition);
   rotate(radians(alpha));
+
+  pop();
 
   for (var i = 0; i < cars.length; i++) {
   cars[i].display();
