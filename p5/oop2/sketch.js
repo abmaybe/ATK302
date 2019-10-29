@@ -5,7 +5,7 @@ function setup() {
   // put setup code here
   createCanvas(800, 800);
   rectMode(CENTER) ;
-  for (var i = 0; i < 100; i++) {
+  for (var i = 0; i < 40; i++) {
   cars.push(new Car());
   }
 
