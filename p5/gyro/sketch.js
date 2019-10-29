@@ -36,12 +36,6 @@ function draw() {
   yPosition = map(beta, -30, 30, 0, height);
 
   push();
-
-
-
-
-
-
   translate(xPosition, yPosition);
   rotate(radians(alpha));
   image(bunnyImage, frogPos.x, frogPos.y, 500);
@@ -52,7 +46,8 @@ function draw() {
     cars[i].drive();
 
     //collision detection
-    if (cars[i].pos.dist(frogPos) < 20) {
+    var distance = cars[i].pos.dist(frogPos);
+    if distance < 15) {
       cars.splice(i, 1);
     }
   }
