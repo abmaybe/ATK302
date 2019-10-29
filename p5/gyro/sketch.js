@@ -11,9 +11,9 @@ var z = 0;
 function setup() {
   // put setup code here
   createCanvas(windowWidth, windowHeight);
-  rectMode(CENTER) ;
+  rectMode(CENTER);
   for (var i = 0; i < 40; i++) {
-  cars.push(new Car());
+    cars.push(new Car());
   }
 
   alpha = 0;
@@ -25,7 +25,7 @@ function setup() {
   imageMode(CENTER);
   rectMode(CENTER);
 
-  frogPos = createVector(width/2, height-80);
+  frogPos = createVector(width / 2, height - 80);
 }
 
 function draw() {
@@ -37,7 +37,7 @@ function draw() {
   yPosition = map(beta, -30, 30, 0, height);
 
 
-  image(bunnyImage, frogPos.x, frogPos.y, 500);
+  image(bunnyImage, xPosition, yPosition, 500);
 
 
   translate(xPosition, yPosition);
@@ -46,12 +46,12 @@ function draw() {
   pop();
 
   for (var i = 0; i < cars.length; i++) {
-  cars[i].display();
-  cars[i].drive();
+    cars[i].display();
+    cars[i].drive();
 
-  //collision detection
-  if (cars[i].pos.dist(frogPos) < 20){
-    cars.splice(i , 1);
+    //collision detection
+    if (cars[i].pos.dist(frogPos) < 20) {
+      cars.splice(i, 1);
     }
   }
 
@@ -75,9 +75,9 @@ function draw() {
   textSize(300);
   textAlign(CENTER);
   text("atk", width / 2, height / 2);
-//frog
+  //frog
 
-//check4Keys();
+  //check4Keys();
 
 }
 
@@ -106,13 +106,13 @@ function Car() {
 
 }
 
-  //function check4Keys(){
-  //if (keyIsDown(LEFT_ARROW)) frogPos.x = frogPos.x - 5;
-  //if (keyIsDown(RIGHT_ARROW)) frogPos.x = frogPos.x + 5;
-  //if (keyIsDown(UP_ARROW)) frogPos.y = frogPos.y - 5;
-  //if (keyIsDown(DOWN_ARROW)) frogPos.y = frogPos.y + 5;
+//function check4Keys(){
+//if (keyIsDown(LEFT_ARROW)) frogPos.x = frogPos.x - 5;
+//if (keyIsDown(RIGHT_ARROW)) frogPos.x = frogPos.x + 5;
+//if (keyIsDown(UP_ARROW)) frogPos.y = frogPos.y - 5;
+//if (keyIsDown(DOWN_ARROW)) frogPos.y = frogPos.y + 5;
 
-  //}
+//}
 
 window.addEventListener('deviceorientation', function(e) {
   alpha = e.alpha;
