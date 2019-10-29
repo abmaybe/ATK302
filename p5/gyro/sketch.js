@@ -39,12 +39,12 @@ function draw() {
 
 
 
-  image(bunnyImage, frogPos.x, frogPos.y, 500);
+
 
 
   translate(xPosition, yPosition);
   rotate(radians(alpha));
-
+  image(bunnyImage, frogPos.x, frogPos.y, 500);
   pop();
 
   for (var i = 0; i < cars.length; i++) {
@@ -78,7 +78,7 @@ function draw() {
   textAlign(CENTER);
   text("atk", width / 2, height / 2);
   frogPos.x = xPosition;
-  frogPos.y = yPosition; 
+  frogPos.y = yPosition;
   //frog
 
   //check4Keys();
