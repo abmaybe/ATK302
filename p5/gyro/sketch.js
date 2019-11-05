@@ -38,7 +38,7 @@ function draw() {
   push();
   translate(xPosition, yPosition);
   rotate(radians(alpha));
-  image(bunnyImage, frogPos.x, frogPos.y, 500);
+  image(bunnyImage, frogPos.x, frogPos.y, 75, 75);
   pop();
 
   for (var i = 0; i < cars.length; i++) {
