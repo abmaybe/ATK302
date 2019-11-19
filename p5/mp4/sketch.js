@@ -65,7 +65,7 @@ function draw() {
         myTimer = 0;
         myState = 5;
       }
-      if (vol > 25) {
+      if (vol > 2) {
         myTimer = 0;
         myState = 4;
       }
