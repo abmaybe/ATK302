@@ -24,7 +24,7 @@ function draw() {
       myTimer++;
       if (mouseIsPressed) {
         myTimer = 0;
-        myState = 1;
+        myState = 2;
       }
       break;
 
@@ -39,7 +39,7 @@ function draw() {
 
       if (mouseIsPressed) {
         myTimer = 0;
-        myState = 2;
+        myState = 3;
       }
 
       break;
@@ -99,7 +99,7 @@ function draw() {
 
  function deviceShaken() {
     if (myState == 2) {
-      myState = 3;
+      myState = 1;
       myTimer = 0;
     }
   }
