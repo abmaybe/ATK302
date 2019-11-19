@@ -24,7 +24,7 @@ function draw() {
       myTimer++;
       if (mouseIsPressed) {
         myTimer = 0;
-        myState = 2;
+        myState = 100;
       }
       break;
 
@@ -39,7 +39,7 @@ function draw() {
 
       if (mouseIsPressed) {
         myTimer = 0;
-        myState = 3;
+        myState = 100;
       }
 
       break;
@@ -65,9 +65,10 @@ function draw() {
         myTimer = 0;
         myState = 5;
       }
-      if (vol > 2) {
+      console.log(vol);
+      if (vol > 0.14) {
         myTimer = 0;
-        myState = 4;
+        myState = 100;
       }
 
       break;
@@ -79,7 +80,7 @@ function draw() {
       myTimer++;
       if (myTimer >= 500) {
         myTimer = 0;
-        myState = 1;
+        myState = 100;
       }
       break;
 
@@ -94,15 +95,18 @@ function draw() {
       }
       break;
 
+    case 100:
+      myState = floor(random(1, 4));
+      break;
   }
 }
 
- function deviceShaken() {
-    if (myState == 2) {
-      myState = 1;
-      myTimer = 0;
-    }
+function deviceShaken() {
+  if (myState == 2) {
+    myState = 100;
+    myTimer = 0;
   }
+}
 
 /*   function mouseReleased() {
     myState = myState + 1;
@@ -111,3 +115,6 @@ function draw() {
     }
   }
    */
+function touchStarted() {
+  getAudioContext().resume();
+}
