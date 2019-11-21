@@ -66,7 +66,7 @@ function draw() {
         myState = 5;
       }
       console.log(vol);
-      if (vol > 0.14) {
+      if (vol > 0.11) {
         myTimer = 0;
         myState = 100;
       }
@@ -96,7 +96,7 @@ function draw() {
       break;
 
     case 100:
-      myState = floor(random(1, 4));
+      myState = floor(random(0.5, 4.49));
       break;
   }
 }
