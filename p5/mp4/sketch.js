@@ -96,7 +96,7 @@ function draw() {
       break;
 
     case 100:
-      myState = floor(random(0.5, 4.49));
+      myState = floor(random(1,5));
       break;
   }
 }
